@@ -1,0 +1,12 @@
+# Used instead of .gitignore when packing for npm, so `dist/` (gitignored)
+# still ships. package.json `files` is the whitelist; this file only excludes
+# extra junk that might otherwise sneak in.
+
+src
+tests
+build.ts
+tsconfig.json
+bun.lock
+.cursor
+.gitignore
+*.tgz
