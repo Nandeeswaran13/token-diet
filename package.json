@@ -1,7 +1,7 @@
 {
   "name": "token-diet",
   "version": "0.1.0",
-  "description": "Zero-dependency, no-LLM prompt compressor: live as-you-type highlights, JSON minify, extractive summarize, and secret/PII hygiene for browser and Node.",
+  "description": "Diet the prompt in the box — before it hits the API. Local, zero-dependency, no LLM: live highlights, token counts, JSON minify, and secret/PII flags for any textarea.",
   "license": "MIT",
   "author": "Nandeeswaran",
   "type": "module",

@@ -1,8 +1,12 @@
 # token-diet
 
-Heuristic **LLM prompt compressor** for the browser. Strip polite filler, collapse verbose phrases, minify JSON blobs embedded in prose, extractive-summarize long pastes, and watch text inputs headlessly — zero runtime dependencies, no React/Vue.
+**Cut tokens in the prompt box. No model. No server. No React.**
 
-Primary UX: `PromptWatcher.feed()` → debounce → `findBloat()` highlight spans. Standalone minify / `summarize` utilities are also exported. `summarize` is **not** part of the live watcher.
+Most compressors run at send time, or they *are* an LLM. token-diet is a headless, zero-dependency TypeScript library that diets the draft **while the user types**: filler, verbose phrases, JSON blobs, markdown chrome — plus secret/PII/jailbreak flags so you don't ship a key with the prompt. Attach `PromptWatcher` to any `<textarea>` in any framework.
+
+Local, deterministic, browser + Node. You paint the highlights; we give you spans, token counts, and one-click `applyFindings`.
+
+Primary UX: `feed()` → debounce → `optimization_ready` with highlighter spans (`kind`, `added`/`removed` to avoid flicker). Standalone `minifyJson` / `summarize` for pastes. `summarize` is **not** on the live watcher.
 
 ## Install
 
