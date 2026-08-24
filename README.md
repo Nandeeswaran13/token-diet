@@ -1,8 +1,8 @@
-# token-diet
+# token-bakery
 
 **Cut tokens in the prompt box. No model. No server. No React.**
 
-Most compressors run at send time, or they *are* an LLM. token-diet is a headless, zero-dependency TypeScript library that diets the draft **while the user types**: filler, verbose phrases, JSON blobs, markdown chrome — plus secret/PII/jailbreak flags so you don't ship a key with the prompt. Attach `PromptWatcher` to any `<textarea>` in any framework.
+Most compressors run at send time, or they *are* an LLM. token-bakery is a headless, zero-dependency TypeScript library that diets the draft **while the user types**: filler, verbose phrases, JSON blobs, markdown chrome — plus secret/PII/jailbreak flags so you don't ship a key with the prompt. Attach `PromptWatcher` to any `<textarea>` in any framework.
 
 Local, deterministic, browser + Node. You paint the highlights; we give you spans, token counts, and one-click `applyFindings`.
 
@@ -11,17 +11,17 @@ Primary UX: `feed()` → debounce → `optimization_ready` with highlighter span
 ## Install
 
 ```bash
-bun add token-diet
+bun add token-bakery
 ```
 
 ```bash
-npm install token-diet
+npm install token-bakery
 ```
 
 ## Quick start
 
 ```ts
-import { compress, findBloat, minifyJson, summarize, PromptWatcher } from "token-diet";
+import { compress, findBloat, minifyJson, summarize, PromptWatcher } from "token-bakery";
 
 compress("I was wondering if you could please review this in order to ship.");
 // → "review this to ship."
@@ -181,7 +181,7 @@ npm login
 npm publish
 ```
 
-`prepublishOnly` runs tests and the build. The package name `token-diet` is unscoped and public.
+`prepublishOnly` runs tests and the build. The package name `token-bakery` is unscoped and public.
 
 ## License
 

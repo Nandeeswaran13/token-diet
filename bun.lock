@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "token-diet",
+      "name": "token-bakery",
       "devDependencies": {
         "@types/bun": "latest",
         "typescript": "^5",

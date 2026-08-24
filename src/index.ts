@@ -1,5 +1,5 @@
 /**
- * token-diet — heuristic LLM-prompt compressor.
+ * token-bakery — heuristic LLM-prompt compressor.
  *
  * Framework-agnostic (no React/Vue). Tree-shakeable ESM for browsers and
  * bundlers. Zero runtime dependencies.
