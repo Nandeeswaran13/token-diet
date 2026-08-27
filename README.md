@@ -1,10 +1,10 @@
 # token-bakery
 
-**Cut tokens in the prompt box. No model. No server. No React.**
+**Cook the prompt in the box. No model. No server. No React.**
 
-Most compressors run at send time, or they *are* an LLM. token-bakery is a headless, zero-dependency TypeScript library that diets the draft **while the user types**: filler, verbose phrases, JSON blobs, markdown chrome — plus secret/PII/jailbreak flags so you don't ship a key with the prompt. Attach `PromptWatcher` to any `<textarea>` in any framework.
+Most compressors run at send time, or they *are* an LLM. token-bakery is a headless, zero-dependency TypeScript library that **prepares** the draft **while the user types**: trims filler, folds verbose phrases, minifies JSON, strips markdown chrome — plus secret/PII/jailbreak flags so you don't plate a key with the prompt. Attach `PromptWatcher` to any `<textarea>` in any framework.
 
-Local, deterministic, browser + Node. You paint the highlights; we give you spans, token counts, and one-click `applyFindings`.
+Local, deterministic, browser + Node. You paint the highlights; we hand you the mise en place — spans, token counts, and one-click `applyFindings`.
 
 Primary UX: `feed()` → debounce → `optimization_ready` with highlighter spans (`kind`, `added`/`removed` to avoid flicker). Standalone `minifyJson` / `summarize` for pastes. `summarize` is **not** on the live watcher.
 
@@ -113,7 +113,7 @@ applyFindings(text, findings, { include: ["secret"] }); // opt-in allowlist
 
 Default **on** for `findBloat` / `PromptWatcher`. Highlight only — `suggestedReplacement === originalText`. Conservative regexes (OpenAI `sk-` / `sk-proj-`, GitHub `ghp_` / `gho_` / `github_pat_`, AWS `AKIA…`, Slack `xox[baprs]-`, Google `AIza…`, JWT `eyJ…`, PEM keys, Bearer; emails; US phone; SSN `###-##-####`; 13–19 digit cards **with Luhn**; jailbreak phrases). Never throws.
 
-**Overlap rule:** hygiene runs after compression findings. If a hygiene span overlaps a compression finding, the **compression finding is dropped** (never diet a secret). `compress()` therefore will not minify JSON or strip filler that covers a flagged key.
+**Overlap rule:** hygiene runs after compression findings. If a hygiene span overlaps a compression finding, the **compression finding is dropped** (never fold a secret into the dough). `compress()` therefore will not minify JSON or strip filler that covers a flagged key.
 
 ### `findBloat` pipeline
 

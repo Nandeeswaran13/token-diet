@@ -30,7 +30,8 @@
  * 9. Tokenizer / heuristic gate: drop findings with no token savings
  * 10. Hygiene (secrets / PII / injection) — highlight only. If a hygiene
  *     span overlaps a compression finding, the **compression finding is
- *     dropped** so we never diet a secret. Default on; `hygiene: false` skips.
+ *     dropped** so we never fold a secret into the dough. Default on;
+ *     `hygiene: false` skips.
  * 11. {@link compress} applies auto-fixable spans via {@link applyFindings}
  *     (skips secret/pii/injection) then {@link normalizeWhitespace}
  *
@@ -138,7 +139,7 @@ export interface CompressOptions {
    * toggle individually (each defaults true when hygiene is on).
    *
    * Overlap: a hygiene span that intersects a compression finding drops
-   * the compression finding (never diet a secret).
+   * the compression finding (never fold a secret into the dough).
    *
    * @default true
    */

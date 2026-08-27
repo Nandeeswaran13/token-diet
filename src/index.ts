@@ -1,5 +1,5 @@
 /**
- * token-bakery — heuristic LLM-prompt compressor.
+ * token-bakery — cook LLM prompts in the box, no model.
  *
  * Framework-agnostic (no React/Vue). Tree-shakeable ESM for browsers and
  * bundlers. Zero runtime dependencies.
